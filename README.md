@@ -72,9 +72,23 @@ Access:
 - `GET /veritasos/reputation/by-handle/:handle` - Get reputation by handle
 - `GET /veritasos/top?limit=20` - Get top trusted identities
 
+### Technology Integration
+
+**VeritasOS leverages:**
+- **OriginTrail DKG**: Publishes reputation profiles as verifiable JSON-LD Knowledge Assets
+- **Model Context Protocol (MCP)**: Provides AI agent tools for trust-based decisions
+- **NeuroWeb/Polkadot**: Blockchain-verified, immutable reputation storage on Polkadot parachain
+- **x402 Protocol**: Future integration for monetizing reputation queries (roadmap)
+
 ### Fork Attribution
 
 This repository is forked from [OriginTrail/dkg-node](https://github.com/OriginTrail/dkg-node). VeritasOS is built as an extension on top of the base DKG Node infrastructure, demonstrating how to build reputation systems using the OriginTrail Decentralized Knowledge Graph.
+
+### Demo & Documentation
+
+- **Quick Demo**: See [DEMO_GUIDE.md](./DEMO_GUIDE.md) for step-by-step demonstrations
+- **Technical Details**: See [VERITASOS_INTEGRATION.md](./VERITASOS_INTEGRATION.md) for architecture
+- **JSON-LD Examples**: Reputation profiles published as structured Knowledge Assets
 
 ---
 
