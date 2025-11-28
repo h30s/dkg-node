@@ -84,11 +84,11 @@ Access:
 
 This repository is forked from [OriginTrail/dkg-node](https://github.com/OriginTrail/dkg-node). VeritasOS is built as an extension on top of the base DKG Node infrastructure, demonstrating how to build reputation systems using the OriginTrail Decentralized Knowledge Graph.
 
-### Demo & Documentation
+### Documentation
 
-- **Quick Demo**: See [DEMO_GUIDE.md](./DEMO_GUIDE.md) for step-by-step demonstrations
-- **Technical Details**: See [VERITASOS_INTEGRATION.md](./VERITASOS_INTEGRATION.md) for architecture
-- **JSON-LD Examples**: Reputation profiles published as structured Knowledge Assets
+- **Technical Specifications**: See [TECHNICAL_DOCUMENTATION.md](./TECHNICAL_DOCUMENTATION.md)
+- **Integration Guide**: See [VERITASOS_INTEGRATION.md](./VERITASOS_INTEGRATION.md)
+- **API Reference**: Available at http://localhost:9200/swagger when running
 
 ---
 
