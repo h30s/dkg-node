@@ -35,6 +35,8 @@
     "@dkg/plugin-example": "^0.0.3",
     "@dkg/plugin-oauth": "^0.0.2",
     "@dkg/plugin-swagger": "^0.0.2",
+    "@dkg/plugin-veritasos-core": "*",
+    "@dkg/plugin-veritasos-mcp": "*",
     "@dkg/plugins": "^0.0.2",
     "@expo-google-fonts/manrope": "^0.4.1",
     "@expo-google-fonts/space-grotesk": "^0.4.0",

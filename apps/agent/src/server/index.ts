@@ -5,6 +5,8 @@ import dkgEssentialsPlugin from "@dkg/plugin-dkg-essentials";
 import createFsBlobStorage from "@dkg/plugin-dkg-essentials/createFsBlobStorage";
 import examplePlugin from "@dkg/plugin-example";
 import swaggerPlugin from "@dkg/plugin-swagger";
+import veritasosCorePlugin from "@dkg/plugin-veritasos-core";
+import veritasosMcpPlugin from "@dkg/plugin-veritasos-mcp";
 //@ts-expect-error No types for dkg.js ...
 import DKG from "dkg.js";
 import { eq } from "drizzle-orm";
@@ -107,6 +109,8 @@ const app = createPluginServer({
     },
     accountManagementPlugin,
     dkgEssentialsPlugin,
+    veritasosCorePlugin, // VeritasOS: Reputation engine and REST API
+    veritasosMcpPlugin,  // VeritasOS: MCP tools for AI agents
     examplePlugin.withNamespace("protected", {
       middlewares: [authorized(["scope123"])], // Allow only users with the "scope123" scope
     }),
