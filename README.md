@@ -1,16 +1,82 @@
-# DKG Node
+# DKG Node + VeritasOS
 
 A comprehensive monorepo for building Decentralized Knowledge Graph (DKG) applications with a modern tech stack including Expo, Drizzle ORM, SQLite, and MCP (Model Context Protocol) integration.
+
+**🎯 This repository includes VeritasOS** - a decentralized reputation layer for trusted AI agents, built as a hackathon project on top of the OriginTrail DKG Node.
 
 ## 🏗️ Architecture Overview
 
 This project consists of:
 
+### Base DKG Node (OriginTrail)
 - **Agent App**: A full-stack DKG agent with Expo UI and MCP server
 - **Plugin System**: Modular plugins for extending functionality
 - **Database Layer**: SQLite with Drizzle ORM for data persistence
 - **Authentication**: OAuth-based authentication system
 - **API Server**: Express-based API with Swagger documentation
+
+### VeritasOS Addition (Hackathon Project)
+- **plugin-veritasos-core**: Sybil-resistant reputation engine with PageRank algorithm
+- **plugin-veritasos-mcp**: MCP tools for AI agents to query trust scores
+- **veritasos-ui**: Next.js web interface for exploring reputation profiles
+- **Features**: Decentralized trust scoring, DKG integration, AI agent decision support
+
+## 🔍 VeritasOS - Decentralized Reputation Layer
+
+**VeritasOS** is a hackathon project built on top of this DKG Node fork, providing a decentralized reputation oracle for AI agents and dApps.
+
+### What VeritasOS Adds
+
+1. **Reputation Engine** (`@dkg/plugin-veritasos-core`)
+   - PageRank-inspired algorithm for computing trust scores
+   - Sybil resistance through network analysis
+   - Publishes reputation profiles as DKG Knowledge Assets
+
+2. **AI Agent Integration** (`@dkg/plugin-veritasos-mcp`)
+   - MCP tools: `trust_getReputation`, `trust_getContentTrust`
+   - Actionable recommendations: TRUST / VERIFY_BEFORE_TRUST / DO_NOT_TRUST
+   - Enables AI agents to make trust-based decisions
+
+3. **Web UI** (`@dkg/veritasos-ui`)
+   - Search identities by handle or ID
+   - Visual trust cards with score breakdowns
+   - Leaderboard of top trusted identities
+   - DKG asset verification
+
+### Quick Start with VeritasOS
+
+```bash
+# Install and build everything
+npm install
+npm run build
+
+# Start the DKG agent with VeritasOS plugins
+cd apps/agent
+npm run dev
+
+# In another terminal, start the VeritasOS UI
+cd apps/veritasos-ui
+npm run dev
+```
+
+Access:
+- **DKG Agent + API**: http://localhost:9200
+- **VeritasOS UI**: http://localhost:3000
+- **API Docs**: http://localhost:9200/swagger
+
+### VeritasOS API Endpoints
+
+- `GET /veritasos/health` - Health check
+- `GET /veritasos/stats` - Database statistics
+- `GET /veritasos/reputation/:subjectId` - Get reputation by ID
+- `GET /veritasos/reputation/by-handle/:handle` - Get reputation by handle
+- `GET /veritasos/top?limit=20` - Get top trusted identities
+
+### Fork Attribution
+
+This repository is forked from [OriginTrail/dkg-node](https://github.com/OriginTrail/dkg-node). VeritasOS is built as an extension on top of the base DKG Node infrastructure, demonstrating how to build reputation systems using the OriginTrail Decentralized Knowledge Graph.
+
+---
 
 ## 📋 Requirements
 
